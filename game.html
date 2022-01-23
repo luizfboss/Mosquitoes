@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mosquitoes</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+</head>
+<body onresize="adjustWindow()">
+  <div class="panel">
+    <div class="lives">
+      <img id="v1" src="img/empty_heart.png">
+      <img id="v2" src="img/full_heart.png">
+      <img id="v3" src="img/full_heart.png">
+    </div>
+
+    <div class="timer">Time remaining: <span id="timer">10</span></div>
+  </div>
+
+  <script>
+    document.getElementById('timer').innerHTML = time
+
+    var createMosquitoe = setInterval(function(){
+      randomPosition()
+    })
+
+    setInterval(function(){
+      randomPosition()
+    }, 1000)
+  </script>
+
+</body>
+</html>
